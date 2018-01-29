@@ -1,0 +1,105 @@
+\ProvidesPackage{latex-macros}
+
+% Require packages
+\RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{bm}
+
+% mathbb letters
+\newcommand{\Cbb}{\mathbb{C}}
+\newcommand{\Ebb}{\mathbb{E}}
+\newcommand{\Nbb}{\mathbb{N}}
+\newcommand{\Pbb}{\mathbb{P}}
+\newcommand{\Qbb}{\mathbb{Q}}
+\newcommand{\Rbb}{\mathbb{R}}
+\newcommand{\Sbb}{\mathbb{S}}
+\newcommand{\Tbb}{\mathbb{T}}
+\newcommand{\Vbb}{\mathbb{V}}
+\newcommand{\Zbb}{\mathbb{Z}}
+
+% mathcal letters
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cV}{\mathcal{V}}
+
+% argmin/argmax as operators
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+% various shorthand macros
+\newcommand{\grad}{\nabla}
+\newcommand{\conv}{\circledast}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\trace}{\mathrm{Tr}}
+\newcommand{\sign}{\mathrm{sign}}
+% middle bar, for use in delimited expressions like sets
+\newcommand{\mmid}{\ \middle| \ }
+
+% macros for delimited expressions
+\newcommand{\abs}[1]{\left| #1  \right|}
+\newcommand{\expfun}[1]{\exp\left\{ #1 \right\}}
+\newcommand{\ip}[1] {\langle #1 \rangle }
+\newcommand{\norm}[1] {\left \| #1 \right \|}
+\newcommand{\opnorm}[1] {\norm{ #1 }_{\mathrm{op}}}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+
+% differential in integrals
+\newcommand{\dd}[1]{\mathrm{d}{#1}}
+
+% expectation, probability and variance, with optional subscripts
+\newcommand{\expec}[2][]{
+    \ifx\\#1\\
+        \Ebb \left[ #2 \right]
+    \else
+        \Ebb_{#1} \left[ #2 \right]
+    \fi
+}
+\newcommand{\prob}[2][]{
+    \ifx\\#1\\
+        \Pbb \left( #2 \right)
+    \else
+        \Pbb_{#1} \left( #2 \right)
+    \fi
+}
+\newcommand{\var}[2][]{
+    \ifx\\#1\\
+    \mathrm{var}_{#1}\left( #2 \right)
+    \else
+    \mathrm{var}\left( #2 \right)
+    \fi
+}
+
+% partial fractions
+\newcommand{\pfrac}[2]{\frac{\partial #1}{\partial #2}}
+
+% matrices
+\newcommand{\pmx}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\bmx}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\Bmx}[1]{\begin{Bmatrix} #1 \end{Bmatrix}}
+
+% Figures
+% produces a two-column figure environment
+\newcommand{\twocolfigs}[2]{
+    \begin{minipage}{0.49 \textwidth}
+        #1
+    \end{minipage}
+    \begin{minipage}{0.49 \textwidth}
+        #2
+    \end{minipage}}
+% produces a three-column figure environment
+\newcommand{\threecolfigs}[3]{
+    \begin{minipage}{0.33 \textwidth}
+        #1
+    \end{minipage}
+    \begin{minipage}{0.33 \textwidth}
+        #2
+    \end{minipage}
+    \begin{minipage}{0.33 \textwidth}
+        #3
+    \end{minipage}}
