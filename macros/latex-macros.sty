@@ -3,6 +3,7 @@
 % Require packages
 \RequirePackage{amsmath,amssymb,amsthm}
 \RequirePackage{bm}
+\RequirePackage{hyperref}
 
 % mathbb letters
 \newcommand{\Cbb}{\mathbb{C}}
@@ -132,3 +133,7 @@
     \begin{minipage}{0.33 \textwidth}
         #3
     \end{minipage}}
+
+% author information - produces a clickable link for author's email
+% example: \email{me@me.com}
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
