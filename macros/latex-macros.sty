@@ -72,19 +72,25 @@
 \newcommand{\setD}{\setminus}
 \newcommand{\setDsym}{\bigtriangleup}
 
-% argmin/argmax as operators
+% argmin/argmax/arginf/argsup as operators
+% with up/down limits
 \DeclareMathOperator*{\argmin}{argmin}
 \DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\arginf}{arginf}
+\DeclareMathOperator*{\argsup}{argsup}
 
 % various shorthand macros
 \newcommand{\grad}{\nabla}
 \newcommand{\conv}{\circledast}
 \newcommand{\convhull}{\mathrm{conv}}
 \newcommand{\rank}{\mathrm{rank}}
-\newcommand{\trace}{\mathrm{Tr}}
+\newcommand{\tr}{\mathrm{Tr}}
 \newcommand{\sign}{\mathrm{sign}}
 % middle bar, for use in delimited expressions like sets
 \newcommand{\mmid}{\ \middle| \ }
+% Positive semidefinite, positive definite cones
+\newcommand{\psd}[1]{\Sbb^{#1}_+}
+\newcommand{\pd}[1]{\Sbb^{#1}_{++}}
 % up/down arrows for limits
 \newcommand{\dto}{\downarrow}
 \newcommand{\uto}{\uparrow}
@@ -96,6 +102,7 @@
 \newcommand{\norm}[1] {\left \| #1 \right \|}
 \newcommand{\opnorm}[1] {\norm{ #1 }_{\mathrm{op}}}
 \newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\trace}[1]{\tr \left( #1 \right)}
 
 % differential in integrals
 \newcommand{\dd}[1]{\mathrm{d}{#1}}
