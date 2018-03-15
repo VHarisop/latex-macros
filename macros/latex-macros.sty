@@ -111,10 +111,13 @@
 \newcommand{\ip}[1] {\left\langle #1 \right\rangle }
 \newcommand{\norm}[1] {\left \| #1 \right \|}
 \newcommand{\opnorm}[1] {\norm{ #1 }_{\mathrm{op}}}
+\newcommand{\infnorm}[1]{\norm{ #1 }_{\infty}}
 \newcommand{\set}[1]{\left\{ #1 \right\}}
 \newcommand{\trace}[1]{\tr \left( #1 \right)}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+% proximal operator
+\newcommand{\prox}[2]{\mathrm{prox}_{#1}\left( #2 \right)}
 
 % differential in integrals
 \newcommand{\dd}[1]{\mathrm{d}{#1}}
@@ -189,3 +192,17 @@
 \newcommand{\propref}[1]{Proposition~\ref{#1}}
 \newcommand{\thmref}[1]{Theorem~\ref{#1}}
 \newcommand{\lemref}[1]{Lemma~\ref{#1}}
+
+% sans-serif bold commands
+\newcommand{\sfbold}[1]{\textbf{\textsf{#1}}}
+\newtheoremstyle{sfstyle}%
+	{}%Name
+	{}%Space Above
+	{}%Space Below
+	{\upshape}%Body Font
+	{}%Indent Amount
+	{\bfseries\sffamily}%Head font style
+	{.}%Punctuation after head
+	{}%Space after
+	%%Newline
+	{}%
