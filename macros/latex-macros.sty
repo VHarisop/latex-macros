@@ -2,21 +2,27 @@
 
 % Require packages
 \RequirePackage{amsmath,amssymb,amsthm}
-\RequirePackage{bm}
+\RequirePackage{bm,bbm}
 \RequirePackage{hyperref}
 
 % mathbb letters
 \newcommand{\Cbb}{\mathbb{C}}
 \newcommand{\Ebb}{\mathbb{E}}
+\newcommand{\Fbb}{\mathbb{F}}
+\newcommand{\Gbb}{\mathbb{G}}
 \newcommand{\Kbb}{\mathbb{K}}
+\newcommand{\Lbb}{\mathbb{L}}
 \newcommand{\Nbb}{\mathbb{N}}
+\newcommand{\Obb}{\mathbb{O}}
 \newcommand{\Pbb}{\mathbb{P}}
 \newcommand{\Qbb}{\mathbb{Q}}
 \newcommand{\Rbb}{\mathbb{R}}
 \newcommand{\Sbb}{\mathbb{S}}
 \newcommand{\Tbb}{\mathbb{T}}
+\newcommand{\Ubb}{\mathbb{U}}
 \newcommand{\Vbb}{\mathbb{V}}
 \newcommand{\Xbb}{\mathbb{X}}
+\newcommand{\Ybb}{\mathbb{Y}}
 \newcommand{\Zbb}{\mathbb{Z}}
 
 % mathcal letters
@@ -97,6 +103,10 @@
 \newcommand{\dto}{\downarrow}
 \newcommand{\uto}{\uparrow}
 \newcommand{\T}{\top}
+% unit ball
+\newcommand{\ball}{\mathbb{B}}
+% multiset
+\newcommand{\multo}{\rightrightarrows}
 
 % domain / interior / closure
 \newcommand{\dom}{\textbf{dom}}
@@ -120,6 +130,8 @@
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 % proximal operator
 \newcommand{\prox}[2]{\mathrm{prox}_{#1}\left( #2 \right)}
+% indicator function
+\newcommand{\1}{\mathbbm{1}}
 
 % differential in integrals
 \newcommand{\dd}[1]{\mathrm{d}{#1}}
@@ -187,6 +199,7 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}{Claim}
 
 % references
 \newcommand{\figref}[1]{Figure~\ref{#1}}
@@ -194,6 +207,8 @@
 \newcommand{\propref}[1]{Proposition~\ref{#1}}
 \newcommand{\thmref}[1]{Theorem~\ref{#1}}
 \newcommand{\lemref}[1]{Lemma~\ref{#1}}
+\newcommand{\claimref}[1]{Claim~\ref{#1}}
+\newcommand{\corlref}[1]{Corollary~\ref{#1}}
 
 % sans-serif bold commands
 \newcommand{\sfbold}[1]{\textbf{\textsf{#1}}}
