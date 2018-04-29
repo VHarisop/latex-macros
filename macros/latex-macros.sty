@@ -53,6 +53,30 @@
 \newcommand{\cY}{\mathcal{Y}}
 \newcommand{\cZ}{\mathcal{Z}}
 
+% Dynamically generates \{x}dot macros, where {x} is any letter in a-z,A-Z.
+% E.g: write \xdot to generate \dot{x}.
+\def\mdefdot#1{\expandafter\def\csname #1dot\endcsname{\dot{#1}}}
+\def\mdefalldot#1{\ifx#1\mdefalldot\else\mdefdot#1\expandafter\mdefalldot\fi}
+\mdefalldot abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\mdefalldot
+
+% Dynamically generates \{x}hat macros, where {x} is any letter in a-z,A-Z.
+% E.g: write \xhat to generate \widehat{x}.
+\def\mdefhat#1{\expandafter\def\csname #1hat\endcsname{\widehat{#1}}}
+\def\mdefallhat#1{\ifx#1\mdefallhat\else\mdefhat#1\expandafter\mdefallhat\fi}
+\mdefallhat abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\mdefallhat
+
+% Dynamically generates \{x}bar macros, where {x} is any letter in a-z
+% E.g: write \xbar to generate \bar{x}.
+\def\mdefbar#1{\expandafter\def\csname #1bar\endcsname{\bar{#1}}}
+\def\mdefallbar#1{\ifx#1\mdefallbar\else\mdefbar#1\expandafter\mdefallbar\fi}
+\mdefallbar abcdefghijklmnopqrstuvwxyz\mdefallbar
+
+% Dynamically generates \{x}tld macros, where {x} is any letter in a-z, A-Z
+% E.g: write \xtld to generate \widetilde{x}.
+\def\mdeftd#1{\expandafter\def\csname #1tld\endcsname{\widetilde{#1}}}
+\def\mdefalltd#1{\ifx#1\mdefalltd\else\mdeftd#1\expandafter\mdefalltd\fi}
+\mdefalltd abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\mdefalltd
+
 %% var letters
 % lower
 \newcommand{\veps}{\varepsilon}
