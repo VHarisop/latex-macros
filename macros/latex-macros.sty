@@ -54,11 +54,6 @@
 \newcommand{\cY}{\mathcal{Y}}
 \newcommand{\cZ}{\mathcal{Z}}
 
-% Dynamically generates \{x}dot macros, where {x} is any letter in a-z,A-Z.
-% E.g: write \xdot to generate \dot{x}.
-\def\mdefdot#1{\expandafter\def\csname #1dot\endcsname{\dot{#1}}}
-\def\mdefalldot#1{\ifx#1\mdefalldot\else\mdefdot#1\expandafter\mdefalldot\fi}
-\mdefalldot abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\mdefalldot
 
 % Dynamically generates \{x}hat macros, where {x} is any letter in a-z,A-Z.
 % E.g: write \xhat to generate \widehat{x}.
