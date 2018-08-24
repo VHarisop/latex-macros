@@ -6,12 +6,18 @@
 \RequirePackage{hyperref}
 
 % mathbb letters
+\newcommand{\Abb}{\mathbb{A}}
 \newcommand{\Cbb}{\mathbb{C}}
+\newcommand{\Dbb}{\mathbb{D}}
 \newcommand{\Ebb}{\mathbb{E}}
 \newcommand{\Fbb}{\mathbb{F}}
 \newcommand{\Gbb}{\mathbb{G}}
+\newcommand{\Hbb}{\mathbb{H}}
+\newcommand{\Ibb}{\mathbb{I}}
+\newcommand{\Jbb}{\mathbb{J}}
 \newcommand{\Kbb}{\mathbb{K}}
 \newcommand{\Lbb}{\mathbb{L}}
+\newcommand{\Mbb}{\mathbb{M}}
 \newcommand{\Nbb}{\mathbb{N}}
 \newcommand{\Obb}{\mathbb{O}}
 \newcommand{\Pbb}{\mathbb{P}}
@@ -21,6 +27,7 @@
 \newcommand{\Tbb}{\mathbb{T}}
 \newcommand{\Ubb}{\mathbb{U}}
 \newcommand{\Vbb}{\mathbb{V}}
+\newcommand{\Wbb}{\mathbb{W}}
 \newcommand{\Xbb}{\mathbb{X}}
 \newcommand{\Ybb}{\mathbb{Y}}
 \newcommand{\Zbb}{\mathbb{Z}}
@@ -133,7 +140,9 @@
 \newcommand{\probto}{\overset{\Pbb}{\longrightarrow}}
 \newcommand{\lpto}[1]{\overset{L^{#1}}{\longrightarrow}}
 
-% domain / interior / closure
+% convex analysis
+\newcommand{\gph}{\mathrm{gph}}
+\newcommand{\epi}{\mathrm{epi}}
 \newcommand{\dom}{\textbf{dom}}
 \newcommand{\intr}[1]{\mathrm{int}\left( #1 \right)}
 \newcommand{\clos}[1]{\mathrm{cl}\left( #1 \right)}
@@ -178,9 +187,9 @@
 }
 \newcommand{\var}[2][]{
     \ifx\\#1\\
-    \mathrm{var}_{#1}\left( #2 \right)
+    \mathrm{Var}_{#1}\left( #2 \right)
     \else
-    \mathrm{var}\left( #2 \right)
+    \mathrm{Var}\left( #2 \right)
     \fi
 }
 
