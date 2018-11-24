@@ -231,11 +231,17 @@
 
 % Theorem envs - [section] means counter resets after each section
 % [theorem] means that same counter as theorem is used
-\newtheorem{definition}{Definition}[section]
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}[theorem]{Proposition}
+
+% Definitions use normal text in body
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+% Remarks, claims do not use extral space or italic text
+\theoremstyle{remark}
 \newtheorem{claim}{Claim}
 \newtheorem{remark}{Remark}
 
