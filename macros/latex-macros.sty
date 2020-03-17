@@ -112,14 +112,15 @@
 \DeclareMathOperator*{\argsup}{argsup}
 
 % various shorthand macros
+\newcommand{\dist}{\textrm{dist}}
 \newcommand{\grad}{\nabla}
 \newcommand{\conv}{\circledast}
-\newcommand{\convhull}{\mathrm{conv}}
+\newcommand{\convhull}{\textrm{conv}}
 % note: span is a latex primitive
-\newcommand{\vspan}{\mathrm{span}}
-\newcommand{\rank}{\mathrm{rank}}
-\newcommand{\tr}{\mathrm{Tr}}
-\newcommand{\sign}{\mathrm{sign}}
+\newcommand{\vspan}{\textrm{span}}
+\newcommand{\rank}{\textrm{rank}}
+\newcommand{\tr}{\textrm{Tr}}
+\newcommand{\sign}{\textrm{sign}}
 \newcommand{\tdef}{\triangleq}
 % middle bar, for use in delimited expressions like sets
 \newcommand{\mmid}{\ \middle| \ }
@@ -139,15 +140,16 @@
 \newcommand{\asto}{\overset{a.s.}{\longrightarrow}}
 \newcommand{\probto}{\overset{\Pbb}{\longrightarrow}}
 \newcommand{\lpto}[1]{\overset{L^{#1}}{\longrightarrow}}
-\newcommand{\weakto}{\overset{\mathrm{weak}}{\longrightarrow}}
-\newcommand{\normto}{\overset{\mathrm{norm}}{\longrightarrow}}
+\newcommand{\weakto}{\overset{\textrm{weak}}{\longrightarrow}}
+\newcommand{\normto}{\overset{\textrm{norm}}{\longrightarrow}}
 
 % convex analysis
-\newcommand{\gph}{\mathrm{gph}}
-\newcommand{\epi}{\mathrm{epi}}
-\newcommand{\dom}{\mathbf{dom}}
-\newcommand{\intr}[1]{\mathrm{int}\left( #1 \right)}
-\newcommand{\clos}[1]{\mathrm{cl}\left( #1 \right)}
+\newcommand{\diag}{\textrm{diag}}
+\newcommand{\gph}{\textrm{gph}}
+\newcommand{\epi}{\textrm{epi}}
+\newcommand{\dom}{\textrm{dom}}
+\newcommand{\intr}[1]{\textrm{int}\left( #1 \right)}
+\newcommand{\clos}[1]{\textrm{cl}\left( #1 \right)}
 \newcommand{\relint}[1]{{#1}^{\circ}}
 
 % shorthands for parentheses / brackets
@@ -156,17 +158,17 @@
 
 % macros for delimited expressions
 \newcommand{\abs}[1]{\left| #1  \right|}
-\newcommand{\expfun}[1]{\exp\left\{ #1 \right\}}
+\newcommand{\expfun}[1]{\exp\left\{ {#1} \right\}}
 \newcommand{\ip}[1] {\left\langle #1 \right\rangle }
 \newcommand{\norm}[1] {\left \| #1 \right \|}
-\newcommand{\opnorm}[1] {\norm{ #1 }_{\mathrm{op}}}
+\newcommand{\opnorm}[1] {\norm{ #1 }_{\textrm{op}}}
 \newcommand{\infnorm}[1]{\norm{ #1 }_{\infty}}
 \newcommand{\set}[1]{\left\{ #1 \right\}}
 \newcommand{\trace}[1]{\tr \left( #1 \right)}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 % proximal operator
-\newcommand{\prox}[2]{\mathrm{prox}_{#1}\left( #2 \right)}
+\newcommand{\prox}[2]{\textrm{prox}_{#1}\left( #2 \right)}
 % indicator function
 \newcommand{\1}{\mathbbm{1}}
 
@@ -190,9 +192,9 @@
 }
 \newcommand{\var}[2][]{
     \ifx\\#1\\
-    \mathrm{Var}_{#1}\left( #2 \right)
+    \textrm{Var}_{#1}\left( #2 \right)
     \else
-    \mathrm{Var}\left( #2 \right)
+    \textrm{Var}\left( #2 \right)
     \fi
 }
 
