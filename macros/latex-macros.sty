@@ -166,6 +166,7 @@
 \newcommand{\ip}[1] {\left\langle #1 \right\rangle }
 \newcommand{\norm}[1] {\left \| #1 \right \|}
 \newcommand{\opnorm}[1] {\norm{ #1 }_{\mathrm{op}}}
+\newcommand{\frobnorm}[1]{\norm{ #1 }_{\mathrm{F}}}
 \newcommand{\infnorm}[1]{\norm{ #1 }_{\infty}}
 \newcommand{\set}[1]{\left\{ #1 \right\}}
 \newcommand{\trace}[1]{\tr \left( #1 \right)}
@@ -175,6 +176,24 @@
 \newcommand{\prox}[2]{\mathrm{prox}_{#1}\left( #2 \right)}
 % indicator function
 \newcommand{\1}{\mathbbm{1}}
+
+% Explicitly sized norms
+\newcommand{\bignorm}[1]{\bigl\| #1 \bigr\|}
+\newcommand{\biggnorm}[1]{\biggl\| #1 \biggr\|}
+\newcommand{\Bignorm}[1]{\Bigl\| #1 \Bigr\|}
+\newcommand{\Biggnorm}[1]{\Biggl\| #1 \Biggr\|}
+
+% Explicitly sized operator norms
+\newcommand{\bigopnorm}[1]{\bigl\| #1 \bigr\|_{\mathrm{op}}}
+\newcommand{\biggopnorm}[1]{\biggl\| #1 \biggr\|_{\mathrm{op}}}
+\newcommand{\Bigopnorm}[1]{\Bigl\| #1 \Bigr\|_{\mathrm{op}}}
+\newcommand{\Biggopnorm}[1]{\Biggl\| #1 \Biggr\|_{\mathrm{op}}}
+
+% Explicitly sized Frobenius norms
+\newcommand{\bigfrobnorm}[1]{\bigl\| #1 \bigr\|_{\mathrm{F}}}
+\newcommand{\biggfrobnorm}[1]{\biggl\| #1 \biggr\|_{\mathrm{F}}}
+\newcommand{\Bigfrobnorm}[1]{\Bigl\| #1 \Bigr\|_{\mathrm{F}}}
+\newcommand{\Biggfrobnorm}[1]{\Biggl\| #1 \Biggr\|_{\mathrm{F}}}
 
 % differential in integrals
 \newcommand{\dd}[1]{\mathrm{d}{#1}}
