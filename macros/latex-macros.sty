@@ -207,25 +207,25 @@
 
 % expectation, probability and variance, with optional subscripts
 \newcommand{\expec}[2][]{
-    \ifx\\#1\\
-        \Ebb \left[ #2 \right]
-    \else
-        \Ebb_{#1} \left[ #2 \right]
-    \fi
+	\ifx\\#1\\
+		\Ebb \left[ #2 \right]
+	\else
+		\Ebb_{#1} \left[ #2 \right]
+	\fi
 }
 \newcommand{\prob}[2][]{
-    \ifx\\#1\\
-        \Pbb \left( #2 \right)
-    \else
-        \Pbb_{#1} \left( #2 \right)
-    \fi
+	\ifx\\#1\\
+		\Pbb \left( #2 \right)
+	\else
+		\Pbb_{#1} \left( #2 \right)
+	\fi
 }
 \newcommand{\var}[2][]{
-    \ifx\\#1\\
-    \mathrm{Var}_{#1}\left( #2 \right)
-    \else
-    \mathrm{Var}\left( #2 \right)
-    \fi
+	\ifx\\#1\\
+		\mathrm{Var}_{#1}\left( #2 \right)
+	\else
+		\mathrm{Var}\left( #2 \right)
+	\fi
 }
 
 % partial fractions
@@ -235,45 +235,3 @@
 \newcommand{\pmx}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 \newcommand{\bmx}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\Bmx}[1]{\begin{Bmatrix} #1 \end{Bmatrix}}
-
-% author information - produces a clickable link for author's email
-% example: \email{me@me.com}
-\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
-
-% Theorem envs - [section] means counter resets after each section
-% [theorem] means that same counter as theorem is used
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{proposition}[theorem]{Proposition}
-
-% Definitions use normal text in body
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
-
-% Remarks, claims do not use extral space or italic text
-\theoremstyle{remark}
-\newtheorem{claim}{Claim}
-\newtheorem{remark}{Remark}
-
-% references
-\newcommand{\figref}[1]{Figure~\ref{#1}}
-\newcommand{\secref}[1]{Section~\ref{#1}}
-\newcommand{\propref}[1]{Proposition~\ref{#1}}
-\newcommand{\thmref}[1]{Theorem~\ref{#1}}
-\newcommand{\lemref}[1]{Lemma~\ref{#1}}
-\newcommand{\claimref}[1]{Claim~\ref{#1}}
-\newcommand{\corlref}[1]{Corollary~\ref{#1}}
-
-% sans-serif bold commands
-\newcommand{\sfbold}[1]{\textbf{\textsf{#1}}}
-\newtheoremstyle{mystyle}%                % Name
-  {}%                                     % Space above
-  {}%                                     % Space below
-  {\upshape}%                                     % Body font
-  {}%                                     % Indent amount
-  {\bfseries\sffamily}%                            % Theorem head font
-  {.}%                                    % Punctuation after theorem head
-  { }%                                    % Space after theorem head, ' ', or
-  %%\newline
-  {}%
