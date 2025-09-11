@@ -3,6 +3,7 @@
 % Require packages
 \RequirePackage{amsmath,amssymb,amsthm}
 \RequirePackage{bm,bbm}
+\RequirePackage{mathtools}
 \RequirePackage{hyperref}
 
 % mathbb letters
@@ -95,6 +96,7 @@
 % various shorthand macros
 \newcommand{\dist}{\mathrm{dist}}
 \newcommand{\proj}{\mathrm{proj}}
+\newcommand{\prox}{\mathrm{prox}}
 \newcommand{\grad}{\nabla}
 \newcommand{\conv}{\circledast}
 \newcommand{\convhull}{\mathrm{conv}}
@@ -143,45 +145,35 @@
 \newcommand{\brks}[1]{\left[ #1 \right]}
 
 % macros for delimited expressions
-\newcommand{\abs}[1]{\left| #1  \right|}
 \newcommand{\expfun}[1]{\exp\left\{ {#1} \right\}}
-\newcommand{\ip}[1] {\left\langle #1 \right\rangle }
-\newcommand{\norm}[1] {\left \| #1 \right \|}
-\newcommand{\opnorm}[1] {\norm{ #1 }_{\mathrm{op}}}
-\newcommand{\frobnorm}[1]{\norm{ #1 }_{\mathrm{F}}}
-\newcommand{\infnorm}[1]{\norm{ #1 }_{\infty}}
-\newcommand{\set}[1]{\left\{ #1 \right\}}
 \newcommand{\trace}[1]{\tr \left( #1 \right)}
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
-\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
-% proximal operator
-\newcommand{\prox}[2]{\mathrm{prox}_{#1}\left( #2 \right)}
 % indicator function
 \newcommand{\1}{\mathbbm{1}}
 
-% Explicitly sized inner products
-\newcommand{\bigip}[1]{\bigl\langle #1 \bigr\rangle}
-\newcommand{\biggip}[1]{\biggl\langle #1 \biggr\rangle}
-\newcommand{\Bigip}[1]{\Bigl\langle #1 \Bigr\rangle}
-\newcommand{\Biggip}[1]{\Biggl\langle #1 \Biggr\rangle}
+%%%%%%
+% The macros below used to be explicit about size, but often required
+% manual adjustments. With mathtools, these can be adjusted on the fly:
+% Example: $\norm{x}$ vs. $\norm[\Big]{x}$ vs. $\norm*{x}$.
+%          (unsized)      (sized as \Big)      (automatically sized)
+%%%%%%
 
-% Explicitly sized norms
-\newcommand{\bignorm}[1]{\bigl\| #1 \bigr\|}
-\newcommand{\biggnorm}[1]{\biggl\| #1 \biggr\|}
-\newcommand{\Bignorm}[1]{\Bigl\| #1 \Bigr\|}
-\newcommand{\Biggnorm}[1]{\Biggl\| #1 \Biggr\|}
+% Inner products
+\DeclarePairedDelimiter{\ip}{\langle}{\rangle}
 
-% Explicitly sized operator norms
-\newcommand{\bigopnorm}[1]{\bigl\| #1 \bigr\|_{\mathrm{op}}}
-\newcommand{\biggopnorm}[1]{\biggl\| #1 \biggr\|_{\mathrm{op}}}
-\newcommand{\Bigopnorm}[1]{\Bigl\| #1 \Bigr\|_{\mathrm{op}}}
-\newcommand{\Biggopnorm}[1]{\Biggl\| #1 \Biggr\|_{\mathrm{op}}}
+% Absolute values
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 
-% Explicitly sized Frobenius norms
-\newcommand{\bigfrobnorm}[1]{\bigl\| #1 \bigr\|_{\mathrm{F}}}
-\newcommand{\biggfrobnorm}[1]{\biggl\| #1 \biggr\|_{\mathrm{F}}}
-\newcommand{\Bigfrobnorm}[1]{\Bigl\| #1 \Bigr\|_{\mathrm{F}}}
-\newcommand{\Biggfrobnorm}[1]{\Biggl\| #1 \Biggr\|_{\mathrm{F}}}
+% Norms
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\frobnorm}{\lVert}{\rVert_{\mathsf{F}}}
+\DeclarePairedDelimiter{\opnorm}{\lVert}{\rVert_{\mathsf{op}}}
+
+% Set brackets
+\DeclarePairedDelimiter{\set}{\lbrace}{\rbrace}
+
+% Floors and ceilings
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 % differential in integrals
 \newcommand{\dd}[1]{\mathrm{d}{#1}}
